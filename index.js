@@ -9,7 +9,7 @@ function main(pointjson) {
   // Google Map Initialization
   var map = new google.maps.Map(document.getElementById('map_canvas'), {
     zoom: 7,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    mapTypeId: google.maps.MapTypeId.TERRAIN,
     center: mapCenter
   });
 
