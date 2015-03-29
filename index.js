@@ -63,7 +63,7 @@ function main(pointjson) {
       var circleAttr = {
             "cx":function(d, i) { return positions[i][0]; },
             "cy":function(d, i) { return positions[i][1]; },
-            "r":3
+            "r":5
       };
 
       var tip = d3.tip()
