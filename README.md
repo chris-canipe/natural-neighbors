@@ -18,6 +18,12 @@ Areas that this can encompass include:
   1. Parks
   1. Wildlife areas
 
+# Execution
+
+1. `git clone` this project.
+2. `cd` to the project.
+3. `ruby -run -e httpd . -p 8888`
+
 # Credits
 
 The idea took root after seeing [this image](http://i.imgur.com/N33uY3a.jpg) and the code for the project sprung from [this example](http://bl.ocks.org/shimizu/5610671).
