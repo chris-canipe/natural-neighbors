@@ -1,0 +1,71 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Rocky Mountain National Park",
+        "Description": "<html><body><img width=\"1\" height=\"1\" style=\"display:none\" src=\"http:\/\/www.google.com\/maps\/gen_204?ct=google_earth:popup&amp;oi=geography-parks._._.en.0x87697a21748e2fed:0xca48117cfe0a5033&amp;cad=lod:9,lat:40.342793,lon:-105.683639\"\/><div id=\"ftid_div\" name=\"0x87697a21748e2fed:0xca48117cfe0a5033&q=Rocky Mountain National Park,US\"><script type=\"text\/javascript\" language=\"JavaScript\" src=\"http:\/\/mw2.google.com\/mw-earth-vectordb\/geographic_web\/dynamic\/localities\/citypage_loader.js\"><\/script><noscript>Please upgrade to see this content.<\/noscript><\/div><\/body><\/html>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.6836389,
+          40.3427932,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Great Sand Dunes National Park",
+        "Description": "<html><body><img width=\"1\" height=\"1\" style=\"display:none\" src=\"http:\/\/www.google.com\/maps\/gen_204?ct=google_earth:popup&amp;oi=geography-parks._._.en.0x8714247dd0832dad:0xb3e3cd9c5e01ac43&amp;cad=lod:11,lat:37.743757,lon:-105.506913\"\/><div id=\"ftid_div\" name=\"0x8714247dd0832dad:0xb3e3cd9c5e01ac43&q=Great Sand Dunes National Park,US\"><script type=\"text\/javascript\" language=\"JavaScript\" src=\"http:\/\/mw2.google.com\/mw-earth-vectordb\/geographic_web\/dynamic\/localities\/citypage_loader.js\"><\/script><noscript>Please upgrade to see this content.<\/noscript><\/div><\/body><\/html>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.5069132,
+          37.7437572,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Mesa Verde National Park",
+        "Description": "<html><body><img width=\"1\" height=\"1\" style=\"display:none\" src=\"http:\/\/www.google.com\/maps\/gen_204?ct=google_earth:popup&amp;oi=geography-parks._._.en.0x873960f740416361:0xe2edb3b4bb208fe0&amp;cad=lod:11,lat:37.230875,lon:-108.461838\"\/><div id=\"ftid_div\" name=\"0x873960f740416361:0xe2edb3b4bb208fe0&q=Mesa Verde National Park,US\"><script type=\"text\/javascript\" language=\"JavaScript\" src=\"http:\/\/mw2.google.com\/mw-earth-vectordb\/geographic_web\/dynamic\/localities\/citypage_loader.js\"><\/script><noscript>Please upgrade to see this content.<\/noscript><\/div><\/body><\/html>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.4618378,
+          37.2308751,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Black Canyon of the Gunnison National Park",
+        "Description": "<html><body><img width=\"1\" height=\"1\" style=\"display:none\" src=\"http:\/\/www.google.com\/maps\/gen_204?ct=google_earth:popup&amp;oi=geography-parks._._.en.0x873f5e76f8a57b29:0xbddf5635fa887976&amp;cad=lod:11,lat:38.540501,lon:-107.701030\"\/><div id=\"ftid_div\" name=\"0x873f5e76f8a57b29:0xbddf5635fa887976&q=Black Canyon of the Gunnison National Park,US\"><script type=\"text\/javascript\" language=\"JavaScript\" src=\"http:\/\/mw2.google.com\/mw-earth-vectordb\/geographic_web\/dynamic\/localities\/citypage_loader.js\"><\/script><noscript>Please upgrade to see this content.<\/noscript><\/div><\/body><\/html>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -107.7010297,
+          38.5405005,
+          0
+        ]
+      }
+    }
+  ]
+}
