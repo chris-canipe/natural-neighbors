@@ -21,45 +21,45 @@ function main(pointjson) {
 
   var mapCenter = new google.maps.LatLng(39.7392, -104.9903);
 
-  //Google Map 初期化
+  // Google Map Initialization
   var map = new google.maps.Map(document.getElementById('map_canvas'), {
     zoom: 7,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     center: mapCenter
   });
 
-  var overlay = new google.maps.OverlayView(); //OverLayオブジェクトの作成
+  var overlay = new google.maps.OverlayView(); // OverLay Creating Objects
 
-  //オーバレイ追加
+  // Overlay Additional
   overlay.onAdd = function () {
 
     var layer = d3.select(this.getPanes().overlayLayer).append("div").attr("class", "SvgOverlay");
     var svg = layer.append("svg");
     var svgoverlay = svg.append("g").attr("class", "AdminDivisions");
 
-    //再描画時に呼ばれるコールバック
+    // Callback for Redrawing
     overlay.draw = function () {
       var markerOverlay = this;
       var overlayProjection = markerOverlay.getProjection();
 
-      //Google Mapの投影法設定
+      // Google Map Projection Set
       var googleMapProjection = function (coordinates) {
         var googleCoordinates = new google.maps.LatLng(coordinates[1], coordinates[0]);
         var pixelCoordinates = overlayProjection.fromLatLngToDivPixel(googleCoordinates);
         return [pixelCoordinates.x + 4000, pixelCoordinates.y + 4000];
       }
 
-      //母点位置情報
+      // Mother Point Position Information
       var pointdata = pointjson.features;
 
-      //ピクセルポジション情報
+      // Pixel Position Information
       var positions = [];
 
       pointdata.forEach(function(d) {
         positions.push(googleMapProjection(d.geometry.coordinates)); //位置情報→ピクセル
       });
 
-      //ボロノイ変換関数
+      // Voronoi Conversion Function
       var polygons = d3.geom.voronoi(positions);
 
       var pathAttr ={
@@ -68,7 +68,7 @@ function main(pointjson) {
         fill:"none"
       };
 
-      //境界表示
+      // State Representation
       svgoverlay.selectAll("path")
         .data(pointdata)
         .attr(pathAttr)
@@ -84,7 +84,7 @@ function main(pointjson) {
             fill:"red"
       }
 
-      //母点表示
+      // Mother Dots
       svgoverlay.selectAll("circle")
         .data(pointdata)
         .attr(circleAttr)
@@ -96,7 +96,7 @@ function main(pointjson) {
 
   };
 
-  //作成したSVGを地図にオーバーレイする
+  // Overlay the SVG onto the map
   overlay.setMap(map);
 
 
