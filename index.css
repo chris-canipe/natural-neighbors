@@ -1,6 +1,7 @@
 html, body{
-    margin: 0px;
-    padding: 0px;
+  font-family: sans-serif;
+  margin: 0px;
+  padding: 0px;
 }
 html, body, #map_canvas {
   width: 100%;
@@ -29,4 +30,5 @@ path {
 
 circle {
   fill: white;
+  cursor: default;
 }

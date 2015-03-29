@@ -18,7 +18,7 @@ function main(pointjson) {
   // Overlay Additional
   overlay.onAdd = function () {
 
-    var layer = d3.select(this.getPanes().overlayLayer).append("div").attr("class", "SvgOverlay");
+    var layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "SvgOverlay");
     var svg = layer.append("svg");
     var svgoverlay = svg.append("g").attr("class", "AdminDivisions");
 
@@ -64,7 +64,16 @@ function main(pointjson) {
             "cx":function(d, i) { return positions[i][0]; },
             "cy":function(d, i) { return positions[i][1]; },
             "r":3
-      }
+      };
+
+      var tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function(d) {
+          return d.properties.Name;
+        });
+
+      svgoverlay.call(tip);
 
       // Mother Dots
       svgoverlay.selectAll("circle")
@@ -73,6 +82,8 @@ function main(pointjson) {
         .enter()
         .append("svg:circle")
         .attr(circleAttr)
+        .on('mouseover', tip.show)
+        .on('mouseout', tip.hide);
 
     };
 
