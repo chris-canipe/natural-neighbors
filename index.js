@@ -1,4 +1,4 @@
-d3.json('co-national-forests.geojson', function(pointjson){
+d3.json('co-national-parks.geojson', function(pointjson){
   main(pointjson);
 });
 
