@@ -41,7 +41,7 @@ function main(pointjson) {
       var positions = [];
 
       pointdata.forEach(function(d) {
-        positions.push(googleMapProjection(d.geometry.coordinates)); //位置情報→ピクセル
+        positions.push(googleMapProjection(d.geometry.coordinates)); // Convert position information to pixels
       });
 
       // Voronoi Conversion Function
