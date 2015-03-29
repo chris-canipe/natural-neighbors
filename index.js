@@ -48,9 +48,7 @@ function main(pointjson) {
       var polygons = d3.geom.voronoi(positions);
 
       var pathAttr ={
-        "d":function(d, i) { return "M" + polygons[i].join("L") + "Z"},
-        stroke:"gray",
-        fill:"none"
+        "d":function(d, i) { return "M" + polygons[i].join("L") + "Z"}
       };
 
       // State Representation
@@ -65,8 +63,7 @@ function main(pointjson) {
       var circleAttr = {
             "cx":function(d, i) { return positions[i][0]; },
             "cy":function(d, i) { return positions[i][1]; },
-            "r":3,
-            fill:"black"
+            "r":3
       }
 
       // Mother Dots

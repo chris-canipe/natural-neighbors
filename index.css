@@ -20,3 +20,13 @@ html, body, #map_canvas {
   width: 8000px;
   height: 8000px;
 }
+
+path {
+  fill: black;
+  opacity: 0.3;
+  stroke: white;
+}
+
+circle {
+  fill: white;
+}
