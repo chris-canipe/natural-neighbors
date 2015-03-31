@@ -5,11 +5,18 @@
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-    <script type="text/javascript" src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="d3-tip.css">
   </head>
   <body>
-    <div id="map_canvas"></div>
+    <form>
+      <label for="data_source">Choose a Natural Neighbor:</label>
+      <select id="data_source">
+        <option value="co-national-parks.geojson">Colorado National Parks</option>
+        <option value="co-national-forests.geojson">Colorado National Forests</option>
+      </select>
+    </form>
+    <section id="map_canvas"></section>
+    <script type="text/javascript" src="index.js"></script>
   </body>
 </html>

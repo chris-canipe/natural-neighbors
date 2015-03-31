@@ -4,7 +4,8 @@ d3.json('co-national-parks.geojson', function(pointjson){
 
 function main(pointjson) {
 
-  var mapCenter = new google.maps.LatLng(39.7392, -104.9903);
+  // The center of Colorado
+  var mapCenter = new google.maps.LatLng(39, -105.547222);
 
   // Google Map Initialization
   var map = new google.maps.Map(document.getElementById('map_canvas'), {
@@ -84,7 +85,6 @@ function main(pointjson) {
         .attr(circleAttr)
         .on('mouseover', tip.show)
         .on('mouseout', tip.hide);
-
     };
 
   };
@@ -92,3 +92,13 @@ function main(pointjson) {
   // Overlay the SVG onto the map
   overlay.setMap(map);
 };
+
+function change_data_source() {
+  var geojson = this.options[this.selectedIndex].value;
+  d3.json(geojson, function(pointjson){
+    main(pointjson);
+  });
+};
+
+d3.select('#data_source')
+  .on('change', change_data_source);
