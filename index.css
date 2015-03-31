@@ -37,9 +37,21 @@ path {
 
 circle {
   fill: white;
+  stroke: black;
+  stroke-width: 2px;
   cursor: default;
 }
 
 form {
   padding: 1em;
+}
+
+.mouseover {
+  transition: all 0.5s ease;
+  fill: gray;
+}
+
+.mouseout {
+  transition: all 0.5s ease;
+  fill: white;
 }

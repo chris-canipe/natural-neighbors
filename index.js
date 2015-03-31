@@ -83,8 +83,14 @@ function main(pointjson) {
         .enter()
         .append("svg:circle")
         .attr(circleAttr)
-        .on('mouseover', tip.show)
-        .on('mouseout', tip.hide);
+        .on('mouseover', function(d) {
+          tip.show(d);
+          d3.select(this).attr('class', 'mouseover');
+        })
+        .on('mouseout', function(d) {
+          tip.hide(d);
+          d3.select(this).attr('class', 'mouseout');
+        });
     };
 
   };
