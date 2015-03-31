@@ -1,7 +1,7 @@
 html, body{
   font-family: sans-serif;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 html, body, #map_canvas {
   width: 100%;
