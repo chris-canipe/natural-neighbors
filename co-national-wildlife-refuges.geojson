@@ -1,0 +1,131 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Rocky Mountain Arsenal National Wildlife Refuge",
+        "Description": "<html><body><img width=\"1\" height=\"1\" style=\"display:none\" src=\"http:\/\/www.google.com\/maps\/gen_204?ct=google_earth:popup&amp;oi=geography-parks._._.en.0x876c7a97d9e86e39:0x5dbd64c2e658fb25&amp;cad=lod:14,lat:39.822348,lon:-104.869094\"\/><div id=\"ftid_div\" name=\"0x876c7a97d9e86e39:0x5dbd64c2e658fb25&q=Rocky Mountain Arsenal National Wildlife Refuge,US\"><script type=\"text\/javascript\" language=\"JavaScript\" src=\"http:\/\/mw2.google.com\/mw-earth-vectordb\/geographic_web\/dynamic\/localities\/citypage_loader.js\"><\/script><noscript>Please upgrade to see this content.<\/noscript><\/div><\/body><\/html>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.8690939,
+          39.8223479,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Two Ponds National Wildlife Refuge",
+        "Description": "<html><body><img width=\"1\" height=\"1\" style=\"display:none\" src=\"http:\/\/www.google.com\/maps\/gen_204?ct=google_earth:popup&amp;oi=geography-parks._._.en.0x876b88de90000001:0xeb204928ee22dfcd&amp;cad=lod:16,lat:39.838902,lon:-105.106162\"\/><div id=\"ftid_div\" name=\"0x876b88de90000001:0xeb204928ee22dfcd&q=Two Ponds National Wildlife Refuge,US\"><script type=\"text\/javascript\" language=\"JavaScript\" src=\"http:\/\/mw2.google.com\/mw-earth-vectordb\/geographic_web\/dynamic\/localities\/citypage_loader.js\"><\/script><noscript>Please upgrade to see this content.<\/noscript><\/div><\/body><\/html>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.1061617,
+          39.8389017,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Rocky Flats National Wildlife Refuge",
+        "Description": "<html><body><img width=\"1\" height=\"1\" style=\"display:none\" src=\"http:\/\/www.google.com\/maps\/gen_204?ct=google_earth:popup&amp;oi=geography-parks._._.en.0x876b8dd955555555:0x1724541dcec2aaa0&amp;cad=lod:14,lat:39.877360,lon:-105.190230\"\/><div id=\"ftid_div\" name=\"0x876b8dd955555555:0x1724541dcec2aaa0&q=Rocky Flats National Wildlife Refuge,US\"><script type=\"text\/javascript\" language=\"JavaScript\" src=\"http:\/\/mw2.google.com\/mw-earth-vectordb\/geographic_web\/dynamic\/localities\/citypage_loader.js\"><\/script><noscript>Please upgrade to see this content.<\/noscript><\/div><\/body><\/html>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.1902297,
+          39.8773603,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Arapahoe National Wildlife Refuge",
+        "Description": "<html><body><img width=\"1\" height=\"1\" style=\"display:none\" src=\"http:\/\/www.google.com\/maps\/gen_204?ct=google_earth:popup&amp;oi=geography-parks._._.en.0x8769cf20ffffffff:0x1fa32e068f7e2cf1&amp;cad=lod:14,lat:40.636929,lon:-106.272809\"\/><div id=\"ftid_div\" name=\"0x8769cf20ffffffff:0x1fa32e068f7e2cf1&q=Arapahoe National Wildlife Refuge,US\"><script type=\"text\/javascript\" language=\"JavaScript\" src=\"http:\/\/mw2.google.com\/mw-earth-vectordb\/geographic_web\/dynamic\/localities\/citypage_loader.js\"><\/script><noscript>Please upgrade to see this content.<\/noscript><\/div><\/body><\/html>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.2728091,
+          40.6369292,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Browns Park National Wildlife Refuge",
+        "Description": "<html><body><img width=\"1\" height=\"1\" style=\"display:none\" src=\"http:\/\/www.google.com\/maps\/gen_204?ct=google_earth:popup&amp;oi=geography-parks._._.en.0x87452f83ffffffff:0x6a930c2765a5fc82&amp;cad=lod:14,lat:40.812794,lon:-108.956166\"\/><div id=\"ftid_div\" name=\"0x87452f83ffffffff:0x6a930c2765a5fc82&q=Browns Park National Wildlife Refuge,US\"><script type=\"text\/javascript\" language=\"JavaScript\" src=\"http:\/\/mw2.google.com\/mw-earth-vectordb\/geographic_web\/dynamic\/localities\/citypage_loader.js\"><\/script><noscript>Please upgrade to see this content.<\/noscript><\/div><\/body><\/html>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.9561661,
+          40.8127941,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Monte Vista National Wildlife Refuge",
+        "Description": "<html><body><img width=\"1\" height=\"1\" style=\"display:none\" src=\"http:\/\/www.google.com\/maps\/gen_204?ct=google_earth:popup&amp;oi=geography-parks._._.en.0x8716745aaaaaaaab:0xf0d8bb378379fd34&amp;cad=lod:14,lat:37.488108,lon:-106.099291\"\/><div id=\"ftid_div\" name=\"0x8716745aaaaaaaab:0xf0d8bb378379fd34&q=Monte Vista National Wildlife Refuge,US\"><script type=\"text\/javascript\" language=\"JavaScript\" src=\"http:\/\/mw2.google.com\/mw-earth-vectordb\/geographic_web\/dynamic\/localities\/citypage_loader.js\"><\/script><noscript>Please upgrade to see this content.<\/noscript><\/div><\/body><\/html>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.099291,
+          37.4881083,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Alamosa National Wildlife Refuge",
+        "Description": "<html><body><img width=\"1\" height=\"1\" style=\"display:none\" src=\"http:\/\/www.google.com\/maps\/gen_204?ct=google_earth:popup&amp;oi=geography-parks._._.en.0x871687e555555555:0xbb517c0a72b5e262&amp;cad=lod:14,lat:37.429415,lon:-105.770329\"\/><div id=\"ftid_div\" name=\"0x871687e555555555:0xbb517c0a72b5e262&q=Alamosa National Wildlife Refuge,US\"><script type=\"text\/javascript\" language=\"JavaScript\" src=\"http:\/\/mw2.google.com\/mw-earth-vectordb\/geographic_web\/dynamic\/localities\/citypage_loader.js\"><\/script><noscript>Please upgrade to see this content.<\/noscript><\/div><\/body><\/html>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.7703287,
+          37.4294146,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Baca National Wildlife Refuge",
+        "Description": "<html><body><img width=\"1\" height=\"1\" style=\"display:none\" src=\"http:\/\/www.google.com\/maps\/gen_204?ct=google_earth:popup&amp;oi=geography-parks._._.en.0x871434ce90000001:0xb69d5aa95a980ef7&amp;cad=lod:16,lat:37.861504,lon:-105.775464\"\/><div id=\"ftid_div\" name=\"0x871434ce90000001:0xb69d5aa95a980ef7&q=Baca National Wildlife Refuge,US\"><script type=\"text\/javascript\" language=\"JavaScript\" src=\"http:\/\/mw2.google.com\/mw-earth-vectordb\/geographic_web\/dynamic\/localities\/citypage_loader.js\"><\/script><noscript>Please upgrade to see this content.<\/noscript><\/div><\/body><\/html>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.7754643,
+          37.8615037,
+          0
+        ]
+      }
+    }
+  ]
+}
