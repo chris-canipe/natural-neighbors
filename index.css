@@ -12,6 +12,7 @@ html, body {
 }
 
 #map_canvas {
+  border: 1px solid gray;
   margin: 0 auto;
   width: 97%;
   height: 90%;
