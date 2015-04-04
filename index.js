@@ -48,18 +48,28 @@ function main(pointjson) {
       }
 
       // Mother Point Position Information
-      var pointdata = pointjson.features;
+      var points = pointjson.features;
 
       // Pixel Position Information
       var positions = [];
 
-      pointdata.forEach(function(d) {
+      points.forEach(function(d) {
         // Convert position information to pixels
         positions.push(googleMapProjection(d.geometry.coordinates));
       });
 
       var polygons = d3.geom.voronoi(positions);
 
+      /* Set up tooltips */
+      var tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function(d) {
+          return d.properties.Name;
+        });
+      svgoverlay.call(tip);
+
+      /* Draw neighborhoods */
       // (M)ove to the first point and draw a
       // (L)ine to each other point.
       // Finally, close the path (Z).
@@ -68,33 +78,21 @@ function main(pointjson) {
           return "M" + polygons[i].join("L") + "Z"
         }
       };
-
-      // State Representation
       svgoverlay.selectAll("path")
-        .data(pointdata)
+        .data(points)
         .enter()
-        .append("svg:path")
+        .append("path")
         .classed("neighborhood", true)
-        .attr(pathDescription)
+        .attr(pathDescription);
 
+      /* Draw points */
       var pointAttr = {
         "cx": function(d, i) { return positions[i][0] },
         "cy": function(d, i) { return positions[i][1] },
         "r": pointRadius
       };
-
-      var tip = d3.tip()
-        .attr('class', 'd3-tip')
-        .offset([-10, 0])
-        .html(function(d) {
-          return d.properties.Name;
-        });
-
-      svgoverlay.call(tip);
-
-      // Mother Dots
       svgoverlay.selectAll("circle")
-        .data(pointdata)
+        .data(points)
         .enter()
         .append("circle")
         .attr(pointAttr)
@@ -112,7 +110,6 @@ function main(pointjson) {
             .classed('mouseout', true);
         });
     };
-
   };
 
   // Overlay the SVG onto the map
