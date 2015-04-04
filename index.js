@@ -1,6 +1,8 @@
 // The center of Colorado
 var mapCenter = new google.maps.LatLng(39, -105.547222);
 
+var pointRadius = 5;
+
 d3.json('co-national-parks.geojson', function(pointjson){
   main(pointjson);
 });
@@ -64,7 +66,7 @@ function main(pointjson) {
       var circleAttr = {
             "cx":function(d, i) { return positions[i][0]; },
             "cy":function(d, i) { return positions[i][1]; },
-            "r":5
+            "r": pointRadius
       };
 
       var tip = d3.tip()
