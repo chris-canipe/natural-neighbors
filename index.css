@@ -34,15 +34,14 @@ html, body {
 
 path {
   fill: black;
-  opacity: 0.3;
-  stroke: white;
+  stroke: black;
+  stroke-width: 2px;
 }
 
 circle {
-  fill: white;
-  stroke: black;
-  stroke-width: 2px;
+  fill: black;
   cursor: default;
+  opacity: 0.5;
 }
 
 form {
@@ -51,10 +50,15 @@ form {
 
 .mouseover {
   transition: all 0.5s ease;
-  fill: gray;
+  opacity: 1;
 }
 
 .mouseout {
   transition: all 0.5s ease;
+  opacity: 0.5;
+}
+
+.neighborhood {
   fill: white;
+  opacity: 0.25;
 }

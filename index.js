@@ -62,7 +62,7 @@ function main(pointjson) {
         .data(pointdata)
         .enter()
         .append("svg:path")
-        .attr("class", "cell")
+        .attr("class", "neighborhood")
         .attr(pathDescription)
 
       var circleAttr = {
