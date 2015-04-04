@@ -29,7 +29,7 @@ function main(pointjson) {
     var layer = d3
       .select(this.getPanes().overlayMouseTarget)
       .append("div")
-      .attr("class", "SvgOverlay");
+      .classed("SvgOverlay", true);
     var svg = layer.append("svg");
     var svgoverlay = svg.append("g");
 
@@ -74,7 +74,7 @@ function main(pointjson) {
         .data(pointdata)
         .enter()
         .append("svg:path")
-        .attr("class", "neighborhood")
+        .classed("neighborhood", true)
         .attr(pathDescription)
 
       var pointAttr = {
