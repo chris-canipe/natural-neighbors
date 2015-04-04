@@ -50,18 +50,20 @@ function main(pointjson) {
       // Voronoi Conversion Function
       var polygons = d3.geom.voronoi(positions);
 
-      var pathAttr ={
+      // (M)ove to the first point and draw a
+      // (L)ine to each other point.
+      // Finally, close the path (Z).
+      var pathDescription ={
         "d":function(d, i) { return "M" + polygons[i].join("L") + "Z"}
       };
 
       // State Representation
       svgoverlay.selectAll("path")
         .data(pointdata)
-        .attr(pathAttr)
         .enter()
         .append("svg:path")
         .attr("class", "cell")
-        .attr(pathAttr)
+        .attr(pathDescription)
 
       var circleAttr = {
             "cx":function(d, i) { return positions[i][0]; },
