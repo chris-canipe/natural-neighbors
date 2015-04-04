@@ -1,11 +1,11 @@
+// The center of Colorado
+var mapCenter = new google.maps.LatLng(39, -105.547222);
+
 d3.json('co-national-parks.geojson', function(pointjson){
   main(pointjson);
 });
 
 function main(pointjson) {
-
-  // The center of Colorado
-  var mapCenter = new google.maps.LatLng(39, -105.547222);
 
   // Google Map Initialization
   var map = new google.maps.Map(document.getElementById('map_canvas'), {
