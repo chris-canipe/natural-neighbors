@@ -23,7 +23,7 @@ function main(pointjson) {
 
     var layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "SvgOverlay");
     var svg = layer.append("svg");
-    var svgoverlay = svg.append("g").attr("class", "AdminDivisions");
+    var svgoverlay = svg.append("g");
 
     // Callback for Redrawing
     overlay.draw = function () {
