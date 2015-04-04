@@ -1,9 +1,19 @@
+var pointRadius = 5;
+var initData = 'co-national-parks.geojson';
 // The center of Colorado
 var mapCenter = new google.maps.LatLng(39, -105.547222);
+// Ala http://stackoverflow.com/a/12027910
+var projectionOffset = 4000;
 
-var pointRadius = 5;
-
-var initData = 'co-national-parks.geojson';
+// Convert coordinates to pixels.
+var googleMapProjection = function (overlayProjection, coords) {
+  var googleCoords = new google.maps.LatLng(coords[1], coords[0]);
+  var pixelCoords = overlayProjection.fromLatLngToDivPixel(googleCoords);
+  return [
+    pixelCoords.x + projectionOffset,
+    pixelCoords.y + projectionOffset
+  ];
+};
 
 d3.json(initData, function(pointjson){
   main(pointjson);
@@ -38,15 +48,6 @@ function main(pointjson) {
       var markerOverlay = this;
       var overlayProjection = markerOverlay.getProjection();
 
-      // Google Map Projection Set
-      var googleMapProjection = function (coordinates) {
-        var googleCoordinates =
-          new google.maps.LatLng(coordinates[1], coordinates[0]);
-        var pixelCoordinates =
-          overlayProjection.fromLatLngToDivPixel(googleCoordinates);
-        return [pixelCoordinates.x + 4000, pixelCoordinates.y + 4000];
-      }
-
       // Mother Point Position Information
       var points = pointjson.features;
 
@@ -55,7 +56,7 @@ function main(pointjson) {
 
       points.forEach(function(d) {
         // Convert position information to pixels
-        positions.push(googleMapProjection(d.geometry.coordinates));
+        positions.push(googleMapProjection(overlayProjection, d.geometry.coordinates));
       });
 
       var polygons = d3.geom.voronoi(positions);
