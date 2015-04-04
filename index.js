@@ -10,18 +10,24 @@ d3.json('co-national-parks.geojson', function(pointjson){
 function main(pointjson) {
 
   // Google Map Initialization
-  var map = new google.maps.Map(document.getElementById('map_canvas'), {
-    zoom: 7,
-    mapTypeId: google.maps.MapTypeId.TERRAIN,
-    center: mapCenter
-  });
+  var map = new google.maps.Map(
+    document.getElementById('map_canvas'),
+    {
+      zoom: 7,
+      mapTypeId: google.maps.MapTypeId.TERRAIN,
+      center: mapCenter
+    }
+  );
 
   var overlay = new google.maps.OverlayView(); // OverLay Creating Objects
 
   // Overlay Additional
   overlay.onAdd = function () {
 
-    var layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "SvgOverlay");
+    var layer = d3
+      .select(this.getPanes().overlayMouseTarget)
+      .append("div")
+      .attr("class", "SvgOverlay");
     var svg = layer.append("svg");
     var svgoverlay = svg.append("g");
 
@@ -32,8 +38,10 @@ function main(pointjson) {
 
       // Google Map Projection Set
       var googleMapProjection = function (coordinates) {
-        var googleCoordinates = new google.maps.LatLng(coordinates[1], coordinates[0]);
-        var pixelCoordinates = overlayProjection.fromLatLngToDivPixel(googleCoordinates);
+        var googleCoordinates =
+          new google.maps.LatLng(coordinates[1], coordinates[0]);
+        var pixelCoordinates =
+          overlayProjection.fromLatLngToDivPixel(googleCoordinates);
         return [pixelCoordinates.x + 4000, pixelCoordinates.y + 4000];
       }
 
@@ -44,17 +52,19 @@ function main(pointjson) {
       var positions = [];
 
       pointdata.forEach(function(d) {
-        positions.push(googleMapProjection(d.geometry.coordinates)); // Convert position information to pixels
+        // Convert position information to pixels
+        positions.push(googleMapProjection(d.geometry.coordinates));
       });
 
-      // Voronoi Conversion Function
       var polygons = d3.geom.voronoi(positions);
 
       // (M)ove to the first point and draw a
       // (L)ine to each other point.
       // Finally, close the path (Z).
-      var pathDescription ={
-        "d":function(d, i) { return "M" + polygons[i].join("L") + "Z"}
+      var pathDescription = {
+        "d": function(d, i) {
+          return "M" + polygons[i].join("L") + "Z"
+        }
       };
 
       // State Representation
