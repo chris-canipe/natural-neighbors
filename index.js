@@ -80,6 +80,7 @@ function main(pointjson) {
       };
       svgoverlay.selectAll("path")
         .data(points)
+        .attr(pathDescription)
         .enter()
         .append("path")
         .classed("neighborhood", true)
@@ -93,6 +94,7 @@ function main(pointjson) {
       };
       svgoverlay.selectAll("circle")
         .data(points)
+        .attr(pointAttr)
         .enter()
         .append("circle")
         .attr(pointAttr)
