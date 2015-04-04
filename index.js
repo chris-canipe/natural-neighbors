@@ -3,7 +3,9 @@ var mapCenter = new google.maps.LatLng(39, -105.547222);
 
 var pointRadius = 5;
 
-d3.json('co-national-parks.geojson', function(pointjson){
+var initData = 'co-national-parks.geojson';
+
+d3.json(initData, function(pointjson){
   main(pointjson);
 });
 
