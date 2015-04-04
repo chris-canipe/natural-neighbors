@@ -38,7 +38,7 @@ path {
   stroke-width: 2px;
 }
 
-circle {
+.point {
   fill: black;
   cursor: default;
   opacity: 0.5;

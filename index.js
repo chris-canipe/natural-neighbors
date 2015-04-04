@@ -65,7 +65,7 @@ function main(pointjson) {
         .attr("class", "neighborhood")
         .attr(pathDescription)
 
-      var circleAttr = {
+      var pointAttr = {
         "cx": function(d, i) { return positions[i][0] },
         "cy": function(d, i) { return positions[i][1] },
         "r": pointRadius
@@ -83,17 +83,21 @@ function main(pointjson) {
       // Mother Dots
       svgoverlay.selectAll("circle")
         .data(pointdata)
-        .attr(circleAttr)
         .enter()
-        .append("svg:circle")
-        .attr(circleAttr)
+        .append("circle")
+        .attr(pointAttr)
+        .classed('point', true)
         .on('mouseover', function(d) {
           tip.show(d);
-          d3.select(this).attr('class', 'mouseover');
+          d3.select(this)
+            .classed('mouseover', true)
+            .classed('mouseout', false);
         })
         .on('mouseout', function(d) {
           tip.hide(d);
-          d3.select(this).attr('class', 'mouseout');
+          d3.select(this)
+            .classed('mouseover', false)
+            .classed('mouseout', true);
         });
     };
 
