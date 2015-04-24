@@ -9,15 +9,28 @@
     <link rel="stylesheet" type="text/css" href="d3-tip.css">
   </head>
   <body>
-    <form>
-      <label for="data_source">Choose a Natural Neighbor:</label>
-      <select id="data_source">
-        <option value="co-national-forests.geojson">Colorado National Forests</option>
-        <option value="co-national-parks.geojson" selected="selected">Colorado National Parks</option>
-        <option value="co-national-wildlife-refuges.geojson">Colorado National Wildlife Refuges</option>
-        <option value="co-state-parks.geojson">Colorado State Parks</option>
-      </select>
-    </form>
+    <section class="body">
+      <h1>Natural Neighbors</h1>
+      <form>
+        <select id="data_source">
+          <option value="co-national-forests.geojson">Colorado National Forests</option>
+          <option value="co-national-parks.geojson" selected="selected">Colorado National Parks</option>
+          <option value="co-national-wildlife-refuges.geojson">Colorado National Wildlife Refuges</option>
+          <option value="co-state-parks.geojson">Colorado State Parks</option>
+        </select>
+      </form>
+      <p>
+        <strong>Natural Neighbors</strong> is an experiment in visualizing natural neighborhoods.
+      </p>
+      <p>
+        Here's how it works:
+      </p>
+      <ol>
+        <li>A coordinate is plotted for each nautral feature.</li>
+        <li>Lines are drawn equidistant between the coordinates.</li>
+        <li>The intersections of the lines create neighborhoods.</li>
+      </ol>
+    </section>
     <section id="map_canvas"></section>
     <script type="text/javascript" src="index.js"></script>
   </body>
