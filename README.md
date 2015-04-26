@@ -21,8 +21,9 @@ Areas that this can encompass include:
 # Execution
 
 1. `git clone` this project.
-2. `cd` to the project.
-3. `ruby -run -e httpd . -p 8888`
+1. `cd` to the project.
+1. Start a local web server, e.g., `ruby -run -e httpd . -p 8888`.
+1. Load `localhost:8888` into your browser (preferably Chrome).
 
 # Credits
 
