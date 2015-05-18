@@ -1,6 +1,7 @@
 var initData = 'co-national-parks.geojson';
 var overlay;
 var pointRadius = 5;
+var SVG_OVERLAY_CLASS = 'SvgOverlay'
 // The center of Colorado
 var mapCenter = new google.maps.LatLng(39, -105.547222);
 // Ala http://stackoverflow.com/a/12027910
@@ -38,7 +39,7 @@ function neighborhoodOverlay(map, pointjson) {
     var layer = d3
       .select(this.getPanes().overlayMouseTarget)
       .append("div")
-      .classed("SvgOverlay", true);
+      .classed(SVG_OVERLAY_CLASS, true);
     var svg = layer.append("svg");
     this.svgoverlay = svg.append("g");
   };
@@ -113,7 +114,7 @@ function neighborhoodOverlay(map, pointjson) {
 };
 
 function main(pointjson) {
-  d3.selectAll('.SvgOverlay').remove();
+  d3.selectAll('.' + SVG_OVERLAY_CLASS).remove();
   overlay = new neighborhoodOverlay(map, pointjson);
 };
 
