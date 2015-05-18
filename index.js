@@ -16,6 +16,16 @@ var googleMapProjection = function (projection, coords) {
   ];
 };
 
+// Google Map Initialization
+var map = new google.maps.Map(
+  document.getElementById('map_canvas'),
+  {
+    zoom: 7,
+    mapTypeId: google.maps.MapTypeId.TERRAIN,
+    center: mapCenter
+  }
+);
+
 // Overlays are how one adds objects to Google Maps.
 // They are tied to coordinates and adhere to drag/zoom.
 neighborhoodOverlay.prototype = new google.maps.OverlayView();
@@ -103,15 +113,7 @@ function neighborhoodOverlay(map, pointjson) {
 };
 
 function main(pointjson) {
-  // Google Map Initialization
-  var map = new google.maps.Map(
-    document.getElementById('map_canvas'),
-    {
-      zoom: 7,
-      mapTypeId: google.maps.MapTypeId.TERRAIN,
-      center: mapCenter
-    }
-  );
+  d3.selectAll('.SvgOverlay').remove();
   overlay = new neighborhoodOverlay(map, pointjson);
 };
 
